@@ -1,0 +1,29 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md p-3 bg-white sticky-top ">
+    <div class="container text-dark">
+        <a href="{% url 'company:home' %}" class="navbar-brand op">Campus Recruitment System</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdownNavbar">
+            <span class="fa fa-3x fa-envelope"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="dropdownNavbar">
+            <ul class="navbar-nav">
+              {% if user.stu or user.company or user. %}
+              <li><h4 class ="text-success m-3">{{ request.user }} </h4></li>
+              <li class="nav-item"><a href="/ishank" class="nav-link btn btn-primary">LOGOUT</a></li>
+              {% else %}
+
+                <li class="nav-item"><a href="/login" class="nav-link  oyo">Company</a></li>
+                <li class="nav-item"><a href="/stuLog" class="nav-link  oyo">Student</a></li>
+                <li class="nav-item"><a href="careers" class="nav-link  oyo">Careers</a></li>
+
+              {% endif %}
+            </ul>
+        </div>
+        <form class="form-inline" action="/search" method="post">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="t1" placeholder="search...">
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </form>
+    </div>
+</nav>

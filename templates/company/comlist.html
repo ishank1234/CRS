@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  {% include 'nav.html' %}
+  <table class="table">
+     <thead class="table-dark">
+     <tr>
+         <th>Roll Number</th>
+         <th>Name</th>
+         <th>Percentile</th>
+         <th>Passing Year</th>
+         <th><a href="{% url 'company:hired' e.id %}" class="btn btn-primary">Hired Students</a></th>
+
+     </tr>
+     </thead>
+     <tbody>
+     {% for y in rec %}
+         {% for r in y %}
+         <tr>
+             <td>{{ r.Roll_number }}</td>
+             <td>{{ r.Name }}</td>
+             <td>{{ r.Percentile }}</td>
+             <td>{{ r.Year_Of_Completion }}</td>
+             <td><a href="{% url 'company:list' r.Roll_number %}"><button type="button" class="btn btn-dark">Click here</button></a></td>
+         </tr>
+             {% endfor %}
+     {% endfor %}
+     </tbody>
+ </table>
+
+
+{% endblock %}

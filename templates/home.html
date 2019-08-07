@@ -1,12 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CRS</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-<h1>Hello first</h1>
+{% block body %}
 
-</body>
-</html>
+<div class="top-bar py-4 bg-light ">
+    <div class="container">
+    <div class="row ">
+        <div class="col-md-7 my-1 p-1">
+            <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-2x fa-twitter px-2"></i></a>
+            <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-2x fa-youtube px-2"></i></a>
+        </div>
+        <div class="col-md-5 my-1 p-2">
+            <i class="fa fa-2x fa-phone pr-2"></i>(+91-7985676179)
+            <i class="fa fa-2x fa-envelope px-2"></i>ishu.ishank1411@gmail.com
+        </div>
+    </div>
+    </div>
+</div>
+{% include 'nav.html' %}
+
+<div class="home">
+
+  <h1 class="text-center px-5 h1">CAMPUS RECRUITMENT System</h1>
+  <h3 class="text-center py-5 h1">Kamla nehru institute of technology,Sultanpur</h3>
+<div class="container m-4 text-primary chopra">
+    <div class="row m-5 p-3">
+      <div class="col-md-4"></div>
+      <div class="col-md-6 m-3 h2 ">
+        <center><a href="/tpo/logtpo" class="btn btn-primary large">For Administrative login </a></center>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+    <center><h2 class="m-4 h4">About Administrators</h2></center>
+    <div class="fecul">
+      <center>
+    <div class="row m-3">
+        <div class="col-md-6 p-2">
+            <h3 class="bob">Dr. Sunil Kumar Sinha</h3>
+            <p><em>Administrator</em></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus enim facere praesentium quam quas quos recusandae reiciendis rem velit voluptate.</p>
+        </div>
+        <div class="col-md-6 p-2">
+            <h3 class="bob">Dr. Amit Medhavi</h3>
+            <p><em>Administrator</em></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus enim facere praesentium quam quas quos recusandae reiciendis rem velit voluptate.</p>
+        </div>
+    </div>
+    </center>
+    </div>
+
+    <div class="container-fluid footer pt-1" style="height: 150px;">
+            <h3 style="text-align: center;color:gray;">©2019 All Rights Reserverd</h2>
+            <h6 style="text-align: center;color:gray;">develop and maintain by Deepak Kumar </h6>
+    </div>
+{% endblock %}

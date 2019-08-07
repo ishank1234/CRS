@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'nav.html' %}
+
+<center>
+<div class="container">
+<h1 class="m-4"><b>Companies Details</b></h2>
+<ul>
+{% for i in c %}
+<li class="pl">{{ i.c_name }}, {{i.c_HR_name }}, {{i.c_email}}, {{ i.c_contact }} </li>
+<center><a href="{% url 'company:tp:dlt' i.id %}" class="btn btn-primary">Delete Details </a> <a href="{% url 'company:tp:pl' i.id %}" class="btn btn-success">Placed Students</a></center>
+{% endfor %}
+</ul>
+</center>
+{% endblock %}

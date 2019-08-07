@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'nav.html' %}
+
+<center>
+<div class="container">
+<h2 class="m-4">Hired Students</h2>
+
+<table class="table">
+{% for i in a%}
+{% for j in i %}
+<tr>
+  <center>
+  <td>
+  {{ j.Roll_number }}</td>
+  <td>{{ j.Name }}</td>
+  </center>
+</tr>
+{% endfor %}
+{% endfor %}
+</table>
+
+</div>
+</center>
+
+{% endblock %}

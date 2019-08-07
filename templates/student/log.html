@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Student
+{% endblock %}
+{% block body %}
+
+{% include 'nav.html' %}
+<div class="bod">
+  <div class="container">
+    <div class="row c1">
+      <div class="col-md-3"></div>
+      <div class="col-md-5 c2">
+        <center><h2 style="color:white">Student Login </h2>
+          <h3 class="text-danger">{{ err }}</h3>
+            <form action="" class="form-group" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit" class="btn btn-dark">
+            <input type="reset" class="btn btn-dark">
+            </form>
+
+            <a href="{% url 'company:stu:stuReg' %}" class="btn btn-dark">Dont't have an account?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

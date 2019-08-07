@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% include 'nav.html' %}
+
+<center><h1 class="m-4 text-primary">Student's Info.</h1></center>
+<div class="container">
+  <center>{{ msg }} <h2>{{ i.Name }}</h2> {{ more }}</center>
+  <center><table class="table">
+    <tr>
+      <th>About</th>
+      <th>Student</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ i.Name }}</td>
+    </tr>
+    <tr>
+      <td>Roll Number</td>
+      <td>{{ i.Roll_number }}</td>
+    </tr>
+    <tr>
+      <td>Year Of Complition</td>
+      <td>{{ i.Year_Of_Completion }}</td>
+    </tr>
+    <tr>
+      <td>Date Of Birth</td>
+      <td>{{ i.DOB }}</td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td>{{ i.Sex }}</td>
+    </tr>
+    <tr>
+      <td>High School Year</td>
+      <td>{{ i.HighSchool }}</td>
+    </tr>
+    <tr>
+      <td>High School Percentage</td>
+      <td>{{ i.HighPer }}</td>
+    </tr>
+    <tr>
+      <td>Intermediate Year</td>
+      <td>{{ i.Intermediate }}</td>
+    </tr>
+    <tr>
+      <td>Intermediate Percentage</td>
+      <td>{{ i.InterPer }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ i.Email }}</td>
+    </tr>
+    <tr>
+      <td>Contact Number</td>
+      <td>{{ i.Contact }}</td>
+    </tr>
+
+  </table>
+</div>
+<br>
+<center><a href="{% url 'company:select' i.Roll_number %}" class="btn btn-outline-dark">Wants to select</a></center>
+{% endblock %}

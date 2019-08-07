@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Student
+{% endblock %}
+{% block head %}
+
+
+{% endblock %}
+{% block body %}
+
+{% include 'nav.html' %}
+<center><h1 class="h9">Forthcoming companies</h1></center>
+<center><h2>{{ msg }}  {{ j.c_name }}</h2></center>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Company Name</th>
+      <th scope="col">Drive_Venue</th>
+      <th scope="col">Drive_Date</th>
+      <th scope="col">Click for apply</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for a in i %}
+    <tr>
+      <td id="pass">{{ a.c_name }}</td>
+      <td>{{ a.c_venue }}</td>
+      <td>{{ a.c_date }}</td>
+
+      <td><a href="{% url 'company:stu:ajax' a.id %}" class="btn btn-primary">Apply for drive</td>
+    <tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% endblock %}

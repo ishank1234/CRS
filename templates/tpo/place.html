@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'nav.html' %}
+
+<center>
+  <h2 class="m-4">Placed Student's Roll Number</h2>
+  {% for i in c %}
+  <li><h3>{{ i.stu_roll }}, </h3></li>
+  {% endfor %}
+</center>
+{% endblock %}

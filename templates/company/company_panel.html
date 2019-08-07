@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+{% include 'nav.html' %}
+
+<div class="container ">
+    <div class="row m-3">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">KNIT welcomes <b>{{ user.company }}</b></h2>
+                </div>
+                <div class="card-body">
+                  <h3>Your Most Welcome <b>{{ user.company.c_HR_name }}</b> in our knit Campus</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at blanditiis culpa doloremque ea eligendi ipsam magni molestias possimus ullam!</p>
+                </div>
+            <div class="card-footer">
+                <center><h3>Developed and maintained by Mr Ishank Chopra</h3></center>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h2>About KNIT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam consectetur cum delectus doloremque eveniet ex id, itaque maxime minus perferendis velit vitae! Atque dolore eius facilis fugit hic nam qui veniam. Architecto assumenda beatae dolores error eveniet impedit laboriosam maiores numquam, odio perferendis quaerat, reprehenderit vero! Deleniti, id perspiciatis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eaque ex inventore nemo nostrum placeat possimus qui recusandae sapiente, sunt tempora totam vel voluptates? Explicabo, inventore laboriosam? Asperiores atque cumque debitis dolore, enim laborum maxime nisi porro possimus ullam, velit.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<div class="card m-4">
+    <div class="card-header">
+        <center><h2 class="card-title">Select Students, According to your Criteria</h2></center>
+    </div>
+    <div class="card-body">
+        <h3 class="card-title">Fill the form and submit your data to get the list of desired students </h3>
+        <form class="form-group" action="./search" method="post">
+            {% csrf_token %}
+            <h3>Select Students branch wise</h3>
+            <input type="checkbox" value="MCA" name="w1"> MCA<br>
+            <input type="checkbox" value="CS" name="w2"> CSE<br>
+            <input type="checkbox" value="IT" name="w3"> IT<br>
+            <input type="checkbox" value="ME" name="w4"> Mechanical<br>
+            <input type="checkbox" value="ES" name="w5"> Electronics<br>
+            <input type="checkbox" value="EE" name="w6"> Electrical<br>
+            <input type="checkbox" value="CE" name="w7"> Civil<br>
+            <br>
+            <br>
+
+            <label><h3>Batch</h3></label>
+            <input type="number" required maxlength="4" minlength="4" name="t3" placeholder="Which Year Students do You Wants to Display">
+            <br><br>
+            <input type="submit" class="btn btn-dark" value="Search">
+            <input type="reset" class="btn btn-dark" value="Reset">
+        </form>
+    </div>
+</div>
+</div>
+<div class="col-sm-2"></div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+h1{
+    color:red;
+}
+.op{
+  color:brown;
+  font-weight: bold;
+  font-size: 30px;
+}
+.oyo{
+  color:black;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.chopra{
+}
+.h1{
+  padding-top:100px;
+  font-weight: bold;
+  font-size: 35px;
+  color:white;
+}
+
+.home{
+    color:brown;
+
+    background-image:url(img/rama.jpg);
+    background-size:cover;
+    position:relative;
+    background-attachment: fixed;
+}
+.fecul{
+        padding:70px 0px;
+    }
+.footer{
+  background-color: black;
+}
+.h4{
+  font-weight: bold;
+  font-size:35px;
+  color:brown;
+}
+
+    .c2{
+                border:1px solid brown;
+                background-color: rgba(0.3,0.6,0.4,0.2);
+                box-shadow:2px 2px 2px 2px brown;
+            }
+
+.bod{
+    background-image: url("img/campus.jpg");
+    background-size:cover;
+    position:relative;
+    padding:180px 0px;
+  }
+.h9{
+  color:brown;
+  margin:10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.pl{
+  font-size: 30px;
+}
